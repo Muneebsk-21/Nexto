@@ -37,28 +37,37 @@ export default function Header() {
           />
         </Link> */}
 
-         <Link href="/">
+        <Link href="/">
           <Image
             src={"/Logoo.png"}
             alt="Sensai Logo"
-            width={200}
-            height={60}
-            className="h-50 py-1 w-auto object-contain"
+            width={120}
+            height={20}
+            className="
+              h-45        /* default (mobile < 640px) */
+              py-2
+              pl-7
+              w-auto
+              object-contain
+            "
           />
+
         </Link>
 
         {/* Actions */}
-        <div className="flex items-center space-x-2 md:space-x-4">
-
-          {/* Logged In Actions */}
+        <div className="flex items-center space-x-2 md:space-x-4 pr-9">
           <SignedIn>
             <Link href="/onboarding">
               <Button
                 variant="outline"
-                className="hidden md:inline-flex items-center gap-2"
+                className="flex items-center gap-2"
               >
                 <LayoutDashboard className="h-4 w-4" />
-                Industry Insights
+
+                {/* Text only on md and above */}
+                <span className="hidden md:inline">
+                  Industry Insights
+                </span>
               </Button>
             </Link>
 

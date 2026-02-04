@@ -94,7 +94,7 @@ export async function getIndustryInsights() {
         keyTrends: insights.keyTrends,
         recommendedSkills: insights.recommendedSkills,
         nextUpdate: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
-        lastUpdate: new Date.now()
+        lastUpdated: new Date()
       },
       create: {
         industry: user.industry,
